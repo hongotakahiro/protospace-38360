@@ -1,0 +1,25 @@
+<%= form_with model: prototype, local: true do |f|%>
+  <div class="field">
+    <%= f.label :prptotype_name, "プロトタイプの名称" %><br />
+    <%= f.text_field :prototype_name, id:"ptototype_name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :catchcopy, "キャッチコピー" %><br />
+    <%= f.text_area :catchcopy, class: :form__text, id:"catchcopy" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :concept, "コンセプト" %><br />
+    <%= f.text_area :concept, class: :form__text, id:"concept" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "プロトタイプの画像" %><br />
+    <%= f.file_field :image, id:"image" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
