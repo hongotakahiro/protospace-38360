@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2022_10_24_114956) do
   end
 
   create_table "prototypes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.integer "prototype_name"
+    t.string "prototype_name"
     t.text "catchcopy"
     t.text "concept"
     t.bigint "user_id"
