@@ -40,6 +40,9 @@ class PrototypesController < ApplicationController
     @comment = Comment.new
     @prototype = Prototype.find(params[:id])
     @comments = @prototype.comments.includes(:user)
+    # @user = @prototype.user
+    @user = User.find(params[:id])
+
   end
 
   def destroy
