@@ -42,7 +42,7 @@ class PrototypesController < ApplicationController
     @prototype = Prototype.find(params[:id])
     @comments = @prototype.comments.includes(:user)
     # @user = @prototype.user
-    @user = User.find(params[:id])
+    # binding.pry
 
   end
 
